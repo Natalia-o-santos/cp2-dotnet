@@ -41,7 +41,7 @@ public class MotorcyclesController : ControllerBase
     public async Task<ActionResult> Create([FromBody] MotorcycleCreateRequest request)
     {
         var validation = await _createValidator.ValidateAsync(request);
-        if (!validation.IsValid) return ValidationProblem(validation.ToDictionary());
+        if (!validation.IsValid) return BadRequest(new ValidationProblemDetails(validation.ToDictionary()));
 
         var id = await _service.CreateAsync(request);
         return CreatedAtAction(nameof(Get), new { id }, new { id });
@@ -51,7 +51,7 @@ public class MotorcyclesController : ControllerBase
     public async Task<ActionResult> Update(Guid id, [FromBody] MotorcycleUpdateRequest request)
     {
         var validation = await _updateValidator.ValidateAsync(request);
-        if (!validation.IsValid) return ValidationProblem(validation.ToDictionary());
+        if (!validation.IsValid) return BadRequest(new ValidationProblemDetails(validation.ToDictionary()));
 
         var ok = await _service.UpdateAsync(id, request);
         return ok ? NoContent() : NotFound();
