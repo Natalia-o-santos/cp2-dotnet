@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FleetRental.Presentation</AssemblyName>
+    <RootNamespace>FleetRental.Presentation</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\/FleetRental.Application\/FleetRental.Application.csproj" />
+    <ProjectReference Include="..\/FleetRental.Infrastructure\/FleetRental.Infrastructure.csproj" />
+    <ProjectReference Include="..\/FleetRental.Domain\/FleetRental.Domain.csproj" />
+  </ItemGroup>
+</Project>
