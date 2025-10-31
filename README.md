@@ -58,6 +58,6 @@ HTTP Codes: 200, 201, 204, 400 (validações), 404.
 Veja `docs/Projeto.md` com a ideia e contexto do domínio.
 
 ## Integrantes
-- Bruno Tizer - RM5
+- Bruno Tizer - RM559999
 - Natalia Santos - RM560306
 
