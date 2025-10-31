@@ -17,11 +17,13 @@ builder.Services.AddFluentValidationAutoValidation();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+// Exibir Swagger sempre e na raiz
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "FleetRental API v1");
+    c.RoutePrefix = string.Empty; // abre em /
+});
 
 app.UseHttpsRedirection();
 app.MapControllers();
