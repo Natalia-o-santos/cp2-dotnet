@@ -60,4 +60,5 @@ Veja `docs/Projeto.md` com a ideia e contexto do domínio.
 ## Integrantes
 - Bruno Tizer - RM559999
 - Natalia Santos - RM560306
+- Felia Damasceno - RM559433
 
